@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<meta name="description" content="Name of your web site">
+<meta name="author" content="Marketify">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<title>porfolio</title>
+
+<!-- STYLES -->
+ <script src="html2canvas.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/plugins.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/modernizr.custom.js"></script>   
+<script type="text/javascript" src="js/generate.js"></script>
+<script src="html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/1.3.8/FileSaver.min.js"></script>
+
+
+
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+	<script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+	<script type="text/javascript" src="js/file.js"></script>
+<!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
+<!-- /STYLES -->
+
+</head>
+
+<body>
+
+	
+<!-- WRAPPER ALL -->
+<div class="arlo_tm_wrapper_all">
+
+	<div id="arlo_tm_popup_blog">
+		<div class="container">
+			<div class="inner_popup scrollable"></div>
+		</div>
+		<span class="close"><a href="#"></a></span>
+	</div>
+	
+	<!-- PRELOADER -->
+	<div class="arlo_tm_preloader">
+		<div class="spinner_wrap">
+			<div class="spinner"></div>
+		</div>
+	</div>
+	<!-- /PRELOADER -->
+	
+    
+    
+
+	
+    <!-- CONTENT -->
+	<div class="arlo_tm_content">
+		<!-- arlo_tm_preloader:after#720808 -->
+		<!-- LEFTPART -->
+		<div class="arlo_tm_leftpart_wrap">
+			<div class="leftpart_inner">
+				<div class="logo_wrap">
+					<a href="#">	<img src="img/nn.png" alt="" /></a>
+		
+			
+				</div>
+				<div class="menu_list_wrap">
+					<ul class="anchor_nav">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#profil">Profil</a></li>
+                        <li><a href="#competences">Competences</a></li>
+                        <li><a href="#formations">Formations</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                        <li><a href="#langues">Langues</a></li>
+                        <li><a href="#centres">Centre d'interet</a></li>
+						<li><a href="/deconnexion">Deconnexion</a></li>
+					</ul>
+				</div>
+				<div class="leftpart_bottom">
+				
+				</div>
+				<a class="arlo_tm_resize" href="#"><i class="xcon-angle-left"></i></a>
+			</div>
+		</div>
+		<!-- /LEFTPART -->
+		
+		<!-- RIGHTPART -->
+		<div id="right">
+	     <div id="content">
+		<div class="arlo_tm_rightpart">
+			<div class="rightpart_inner">
+				<div class="arlo_tm_section" id="home">
+					
+					<div class="arlo_tm_hero_header_wrap">
+						<div class="arlo_tm_universal_box_wrap">
+							<div class="bg_wrap">
+								<div class="overlay_image hero jarallax" data-speed="0.1"></div>
+								<div class="overlay_color hero"></div>
+							</div>
+							<div class="content hero">
+								<div class="inner_content">
+									<div class="image_wrap">
+										
+										<img src="http://localhost:8000/upimage/<%=profil.photo%>" alt="" />
+										
+									</div>
+									
+									<div class="name_holder">
+										<h3><%=profil.nom%> <span> <%=profil.prenom%></span></h3>
+									</div>
+									<div class="text_typing">
+										<p>JE SUIS <%=profil.profession%></p>
+									</div>
+								</div>
+							</div>
+							<div class="arlo_tm_arrow_wrap bounce anchor">
+								<a href="#profil"><i class="xcon-angle-double-down"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- profil -->
+				<div class="arlo_tm_section relative" id="profil">
+					<div class="arlo_tm_about_wrapper_all">
+						<div class="container">
+							<div class="arlo_tm_title_holder">
+								<h3>Profil</h3>
+								<span>Mes informations general</span>
+								<div class="overlay">
+									<div class="link1"><a href="/upprof?id=<%=profil.id%>&idf=<%=profil.idInsc%>" >edit</a></div>
+								  </div>
+							</div>
+							<div class="arlo_tm_about_wrap">
+								<div class="author_wrap">
+									<div class="leftbox">
+										<div class="about_image_wrap parallax" data-relative-input="true">
+											<div class="image layer" data-depth="0.1">
+												<img src="img/about/550x640.jpg" alt="" />
+											
+												
+												<div class="inner" data-img-url="http://localhost:8000/upimage/<%=profil.photo%>"></div>
+											</div>
+											<div class="border layer" data-depth="0.2">
+												<img src="img/about/550x640.jpg" alt="" />
+												<div class="inner"></div>
+											</div>
+										</div>
+
+									</div>
+									<div class="rightbox">
+										<div class="arlo_tm_mini_title_holder">
+											<h4>Je suis <%=profil.nom%> <%=profil.prenom%> et je suis <%=profil.profession%></h4>
+										</div>
+										<div class="definition">
+											
+										</div>
+										<div class="about_short_contact_wrap">
+											<p>Salut! Je m'appelle <strong> <%=profil.nom%> <%=profil.prenom%></strong>
+											 </p>
+											<p> <%=profil.message%></p>
+											<ul>
+												<li>
+													<span><label>nom complet:</label> <%=profil.nom%> <%=profil.prenom%> </span>
+												</li>
+												<li>
+													<span><label>Email:</label><%=profil.email%> </span>
+												</li>
+												<li>
+													<span><label>Tel:</label> <%=profil.tel%></span>
+												</li>
+												<li>
+													<span><label>Age:</label><%=profil.age%> </span>
+												</li>
+												<li>
+													<span><label>Profession:</label><%=profil.profession%> </span>
+												</li>	
+												<li>
+													<span><label>Website:</label> <a href="<%=profil.website%>"></a></span>
+												</li>
+												
+											
+											</ul>
+										</div>
+										<div class="buttons_wrap" >
+											<ul>
+												<li>
+													<span><button onclick="generatePDF()">Download CV</button></span>
+												</li>
+												
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /profil -->
+				
+				<!-- competences -->
+				<div class="arlo_tm_section" id="competences">
+					<div class="arlo_tm_skills_wrap">
+						<div class="container">
+							<div class="inner_wrap">
+								<div class="leftbox">
+									<div class="arlo_tm_mini_title_holder">
+										<h4>MES COMPETENCES</h4>
+										
+										   <div class="overlay">
+											<div class="link1"><a href="/addcomp?idInsc=<%=profil.idInsc%>&id=<%=id%>" >ADD</a></div>
+										  </div>
+									</div>
+								</div>
+
+									<div class="rightbox">
+									<div class="progress_bar_wrap_total">
+										<br><br><br>
+										<div class="arlo_tm_progress_wrap" data-size="medium" data-round="c" data-strip="off">
+											<% for(var i = 0; i< competence.length ; i++) { %>
+											
+										
+
+												
+												<%if (competence[i].niveau=='debutant') {%>
+													 <br><br>
+											<div class="arlo_tm_progress" data-value="25" data-color="#000">
+												<span><span class="label"><%=competence[i].competence%> - <span class="experience"><%=competence[i].ans%>  years of experience</span></span><span class="number"> Debutant --25%</span></span>
+												<div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
+											</div>
+											<div class="overlay">
+												<div class="link2"><a href="/upcomp?id=<%=competence[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+											  </div>
+											<div class="overlay">
+												<div class="link2"><a href="/deleteComp?id=<%=competence[i].id%>&idf=<%=profil.idInsc%>" >Delete</a></div>
+											  </div>
+											 
+											<% } else if(competence[i].niveau=='intermediaire') {%>
+												<br><br>
+												<div class="arlo_tm_progress" data-value="50" data-color="#000">
+													<span><span class="label"><%=competence[i].competence%> - <span class="experience"><%=competence[i].ans%>  years of experience</span></span><span class="number">Intermediaire --50%</span></span>
+													<div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
+												</div>
+												<div class="overlay">
+													<div class="link2"><a href="/upcomp?id=<%=competence[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+												  </div>
+												<div class="overlay">
+													<div class="link2"><a href="/deleteComp?id=<%=competence[i].id%>&idf=<%=profil.idInsc%>" >Delete</a></div>
+												  </div>
+
+												  
+
+												<% } else if(competence[i].niveau=='niveau avance') {%>
+													 <br><br>
+													<div class="arlo_tm_progress" data-value="75" data-color="#000">
+														<span><span class="label"><%=competence[i].competence%> - <span class="experience"><%=competence[i].ans%>  years of experience</span></span><span class="number">Niveau Avancé --75%</span></span>
+														<div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
+													</div>
+													<div class="overlay">
+														<div class="link2"><a href="/upcomp?id=<%=competence[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+													  </div>
+													<div class="overlay">
+														<div class="link2"><a href="/deleteComp?id=<%=competence[i].id%>&idf=<%=profil.idInsc%>" >Delete</a></div>
+													  </div>
+													 
+													
+													<% } else if(competence[i].niveau=='expert') {%>
+														<br><br>
+														<div class="arlo_tm_progress" data-value="100" data-color="#000">
+															<span><span class="label"><%=competence[i].competence%> - <span class="experience"><%=competence[i].ans%>  years of experience</span></span><span class="number">Expert --100%</span></span>
+															<div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
+														</div>
+														<div class="overlay">
+															<div class="link2"><a href="/upcomp?id=<%=competence[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+														  </div>
+															<div class="overlay">
+															<div class="link2"><a href="/deleteComp?id=<%=competence[i].id%>&idf=<%=profil.idInsc%>" >Delete</a></div>
+														  </div>
+														 
+
+											
+
+											<% } %>	
+											
+										<% } %>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /competence -->
+				
+				<!-- formation -->
+				<div class="arlo_tm_section" id="formations">
+					<div class="arlo_tm_services_wrap">
+						<div class="container">
+							<div class="arlo_tm_title_holder">
+								<h3>Formations</h3>
+								
+								 <div class="overlay">
+												<div class="link1"><a href="/addfor?idInsc=<%=profil.idInsc%>&id=<%=id%>" >ADD</a></div>
+											  </div>
+								
+							</div>
+
+						
+							
+							<div class="list_wrap"> 
+								<ul>
+										<% for(var i = 0; i< Formation.length ; i++) { %>
+												
+									<li>
+                                     
+
+										<div class="inner"> <div class="overlay">
+									<div class="link"><a href="/upfor?id=<%=Formation[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+									  </div>
+									 
+											 <div class="overlay">
+									<div class="lin"><a href="/deleteForma?id=<%=Formation[i].id%>&idf=<%=profil.idInsc%>"  >Delete</a></div>
+								  </div>	
+											<div class="icon">
+												<img class="svg" src="img/svg/layers.svg" alt="" />
+											</div>
+											<div class="title_service">
+												<h2><%=Formation[i].formation%></h2>
+												
+											</div>
+											<div class="title_service">
+												<h4><%=Formation[i].etablissement%></h4>
+												
+											</div>
+											<div class="title_service">
+												<h4><%=Formation[i].ville%></h4>
+												
+											</div>
+											<div class="title_service">
+												<h4><%= Formation[i].dateD %></h4>
+												
+											</div>
+											<div class="title_service">
+												<h4><%=Formation[i].dateF%></h4>
+												
+											</div>
+											
+											<div class="text">
+												<p><%=Formation[i].message%></p>
+											</div>
+										</div>
+									</li>
+									
+
+									
+									<% } %>
+								</ul>
+							</div>
+
+ 
+                           
+
+						</div>
+					</div>
+				</div>
+				<!-- /formation -->
+				
+				<!-- experiences -->
+				<div class="arlo_tm_section" id="experiences">
+					<div class="arlo_tm_P_wrap">
+						<div class="container"><br><br><br>
+							<div class="arlo_tm_title_holder">
+								<h3>EXPERIENCES </h3>
+								
+								 <div class="overlay">
+												<div class="link1"><a href="/addexp?idInsc=<%=profil.idInsc%>&id=<%=id%>" >ADD</a></div>
+											  </div>
+								
+							</div>
+
+						
+							
+							<div class="list_wrap"> 
+								<ul>
+									<% for(var i = 0; i< experience.length ; i++) { %>
+												
+									<li>
+                                     
+
+										<div class="inner"> <div class="overlay">
+									<div class="link"><a href="/upExp?id=<%=experience[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+									  </div>
+									 
+											 <div class="overlay">
+									<div class="lin"><a href="/deleteExp?id=<%=experience[i].id%>&idf=<%=profil.idInsc%>"  >Delete</a></div>
+								  </div>	
+											<div class="icon">
+												<img class="svg" src="img/svg/layers.svg" alt="" />
+											</div>
+											<div class="title_service">
+												<h3><%=experience[i].poste%></h3>
+												
+											</div>
+											<div class="title_service">
+												<h4><%=experience[i].ville%></h4>
+												
+											</div>
+											<div class="title_service">
+												<h4><%=experience[i].dateD%></h4>
+												
+											</div>
+											<div class="title_service">
+												<h4><%=experience[i].dateF%></h4>
+												
+											</div>
+											<div class="title_service">
+												<p><%=experience[i].message%></p>
+												
+											</div>
+											
+											
+										</div>
+									</li>
+									
+
+									
+									<% } %>
+								</ul>
+							</div>
+
+ 
+							
+
+						</div>
+					</div>
+				</div>
+			
+							
+				<!-- /experiences -->
+
+               	<!-- langues -->
+				<div class="arlo_tm_section" id="langues">
+					<div class="arlo_tm_skills_wrap">
+						<div class="container">
+							<div class="inner_wrap">
+								<div class="leftbox">
+									<div class="arlo_tm_mini_title_holder">
+										<h4>LANGUES</h4>
+										
+													
+													  <div class="overlay">
+														<div class="link1"><a href="/addlangue?idInsc=<%=profil.idInsc%>&id=<%=id%>" >ADD</a></div>
+													  </div>
+													</div>
+												</div>
+												
+								      <div class="rightbox">
+								     	<div class="progress_bar_wrap_total">
+										    <div class="arlo_tm_progress_wrap" data-size="medium" data-round="c" data-strip="off">
+											<% for(var i = 0; i< langue.length ; i++) { %>
+												
+												<%if (langue[i].niveau=='debutant') {%> 
+
+													
+													<br><br>
+													
+													<div class="arlo_tm_progress" data-value="20" data-color="#000">
+												  
+													  <span><span class="label"><%=langue[i].langue%> - </span><span class="number">--Debutant  20%</span></span>
+													  
+													  <div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
+												 <div class="overlay">
+														<div class="link2"><a href="/uplangue?id=<%=langue[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+													  </div>
+													<div class="overlay">
+														<div class="link2"><a href="/deleteLang?id=<%=langue[i].id%>&idf=<%=profil.idInsc%>" >Delete</a></div>
+													  </div>
+													
+													  <% } else if(langue[i].niveau=='intermediaire') {%>
+														
+														<br><br>
+														
+																			<div class="arlo_tm_progress" data-value="40" data-color="#000">
+												  
+														<span><span class="label"><%=langue[i].langue%> - </span><span class="number">--Intermediaire  40%</span></span>
+														
+														<div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
+														<div class="overlay">
+															<div class="link2"><a href="/uplangue?id=<%=langue[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+														  </div>
+														<div class="overlay">
+															<div class="link2"><a href="/deleteLang?id=<%=langue[i].id%>&idf=<%=profil.idInsc%>" >Delete</a></div>
+														  </div>
+														
+														
+														<%} else if(langue[i].niveau=='courant') {%>
+															<br><br>
+															
+															<div class="arlo_tm_progress" data-value="60" data-color="#000">
+													
+															  <span><span class="label"><%=langue[i].langue%> - </span><span class="number">--Courant  60%</span></span>
+															  
+															  <div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
+															 
+															   <div class="overlay">
+																<div class="link2"><a href="/uplangue?id=<%=langue[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+															  </div>
+															<div class="overlay">
+																<div class="link2"><a href="/deleteLang?id=<%=langue[i].id%>&idf=<%=profil.idInsc%>" >Delete</a></div>
+															  </div>
+															
+															  <%} else if(langue[i].niveau=='bilangue') {%>
+																
+																<br><br>
+																
+																<div class="arlo_tm_progress" data-value="80" data-color="#000">
+													
+																  <span><span class="label"><%=langue[i].langue%>- </span><span class="number">--Bilangue  80%</span></span>
+																  
+																  <div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
+																  <div class="overlay">
+																	<div class="link2"><a href="/uplangue?id=<%=langue[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+																  </div>
+																<div class="overlay">
+																	<div class="link2"><a href="/deleteLang?id=<%=langue[i].id%>&idf=<%=profil.idInsc%>" >Delete</a></div>
+																  </div>
+																  <%} else if(langue[i].niveau=='Langue maternelle') {%>
+																	
+																	<br><br>
+																	  
+																	<div class="arlo_tm_progress" data-value="100" data-color="#000">
+													
+																	  <span><span class="label"><%=langue[i].langue%> - </span><span class="number">--Langue maternelle  100%</span></span>
+																	  
+																	  <div class="arlo_tm_bar_bg"><div class="arlo_tm_bar_wrap"><div class="arlo_tm_bar"></div></div></div>
+																	<div class="overlay">
+																		<div class="link2"><a href="/uplangue?id=<%=langue[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+																	  </div>
+																	<div class="overlay">
+																		<div class="link2"><a href="/deleteLang?id=<%=langue[i].id%>&idf=<%=profil.idInsc%>" >Delete</a></div>
+																	  </div>
+
+
+
+
+
+														<% } %>	
+											</div>
+											
+											<% } %>	
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /langues -->
+                   <!-- centres -->
+
+				<div class="arlo_tm_section" id="centres">
+					<div class="arlo_tm_services_wrap">
+						<div class="container">
+							<div class="arlo_tm_title_holder">
+								<h3>CENTRE D'INTERETS</h3>
+								 	 <div class="overlay">
+												<div class="link1"><a href="/addCentre?idInsc=<%=profil.idInsc%>&id=<%=id%>" >ADD</a></div>
+											  </div>
+								
+							</div>
+							<div class="list_wrap">
+								<ul>
+									<% for(var i = 0; i< interet.length ; i++) { %>
+									<li>
+										<div class="inner">
+											 <div class="overlay">
+												<div class="link"><a href="/upcentre?id=<%=interet[i].id%>&idf=<%=profil.idInsc%>" >Edit</a></div>
+												  </div>
+														 <div class="overlay">
+												<div class="lin"><a href="/deleteCentre?id=<%=interet[i].id%>&idf=<%=profil.idInsc%>" >Delete</a></div>
+											  </div>
+
+											 
+											 
+											 
+											  <div class="icon">
+												<img class="svg" src="img/svg/layers.svg" alt="" />
+											</div>
+											
+											<div class="title_service">
+												<h3><%=interet[i].interet%></h3>
+											</div>
+											
+										</div>
+									</li>
+								
+									<% } %>	
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+              <!-- /centre-->
+
+
+				
+
+				<!--FOOTER -->
+				<div class="arlo_tm_section" >
+					
+						<div class="arlo_tm_footer_wrap">
+							<div class="container">
+								<p>&copy; Copyright 2019. All Rights are Reserved.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- / FOOTER -->
+				
+			</div>
+		</div>
+
+	</div>
+
+</div>
+		<!-- /RIGHTPART -->
+		
+		<a class="arlo_tm_totop" href="#"></a> 
+		
+	</div>
+</div>
+<!-- / WRAPPER ALL -->
+	
+<!-- SCRIPTS -->
+<script src="js/jquery.js"></script>
+<!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]	-->
+<script src="js/plugins.js"></script>
+<script src="js/init.js"></script>
+<!-- /SCRIPTS -->
+
+<div id="editor"></div>
+
+</body>
+</html>

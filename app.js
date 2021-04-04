@@ -16,20 +16,91 @@ const session = require('express-session');
 
 
 
-var connect = mysql.createConnection({
+var connec = mysql.createConnection({
   host     : 'localhost',
- 
   user     : 'root',
   password : '',
-  database : 'base'
+  
 });
 
-connect.connect(function(err){
+connec.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+  connec.query("CREATE DATABASE portdb", function (err, result) {
+    if (err) throw err;
+    console.log("Database created");
 
-    if(err) throw err
-    console.log("connected");
+  });
+});
 
-}); 
+
+var connect = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : '',
+  database:'portdb'
+});
+
+connect.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+ 
+});
+
+
+  var tabIns="create table inscription(idInsc INT PRIMARY KEY AUTO_INCREMENT, pseudo varchar(44),email varchar(44),password varchar(99)) ";
+connect.query(tabIns, function (err, result) {
+  if (err) throw err;
+  console.log("Table inscription created");
+  
+});
+
+
+
+
+ 
+  var tabProf="create table profil(id INT AUTO_INCREMENT PRIMARY KEY , nom varchar(44),prenom varchar(44),email varchar(44),tel varchar(44),age varchar(44),adresse varchar(44),profession varchar(44), website varchar(44), message varchar(400),photo varchar(44),idInsc int(33), FOREIGN KEY (idInsc) REFERENCES inscription(idInsc))"
+  connect.query(tabProf, function (err, result) {
+    if (err) throw err;
+    console.log("Table profil created");
+  });
+   
+  var tabcomp="create table competence(id INT AUTO_INCREMENT PRIMARY KEY ,competence varchar(44),niveau varchar(44),ans varchar(44),idInsc int(33),FOREIGN KEY (idInsc) REFERENCES inscription(idInsc))"
+    connect.query(tabcomp, function (err, result) {
+      if (err) throw err;
+      console.log("Table competence created"); 
+    });
+    
+    var tabfor="create table formation(id INT AUTO_INCREMENT PRIMARY KEY ,formation varchar(44),etablissement varchar(44),ville varchar(44),dateD varchar(44),dateF varchar(44),message varchar(444),idInsc int(33),FOREIGN KEY (idInsc) REFERENCES inscription(idInsc))"
+      connect.query(tabfor, function (err, result) {
+        if (err) throw err;
+        console.log("Table formation created"); 
+      });
+       
+      var tabexp="create table experience(id INT AUTO_INCREMENT PRIMARY KEY ,poste varchar(33),ville varchar(33),dateD varchar(34) ,dateF varchar(34) ,message varchar(33),idInsc int(33),FOREIGN KEY (idInsc) REFERENCES inscription(idInsc))"
+        connect.query(tabexp, function (err, result) {
+          if (err) throw err;
+          console.log("Table experience created");
+        });
+         
+        var tablang="create table langue (id INT AUTO_INCREMENT PRIMARY KEY , langue varchar(33) ,niveau varchar(33),idInsc int(33),FOREIGN KEY (idInsc) REFERENCES inscription(idInsc))"
+          connect.query(tablang, function (err, result) {
+            if (err) throw err;
+            console.log("Table langue created");
+          });
+           
+          
+          
+          var tabcent="create table centre(id INT AUTO_INCREMENT PRIMARY KEY ,interet varchar(33),idInsc int(33),FOREIGN KEY (idInsc) REFERENCES inscription(idInsc))"
+            connect.query(tabcent, function (err, result) {
+              if (err) throw err;
+              console.log("Table centre created");
+            });
+
+         
+
+
+
 
 //static files
  app.use(express.static('public'))
@@ -54,9 +125,11 @@ app.get('/Accueil',(req,res,next) => {
     });
     
 app.get('/profil',(req,res,next) => {
+ 
   res.render('profil.ejs');
+
       //  fs.createReadStream(path.join(__dirname,'profil.html')).pipe(res);
-    });
+ });
 
 app.get('/formation',(req,res,next) => {
       // fs.createReadStream(path.join(__dirname,'formation.html')).pipe(res);
@@ -85,9 +158,13 @@ app.get('/centre',(req,res,next) => {
 });
 
 app.get('/inscription',(req,res,next) => {
+ 
+  res.render('inscription.hbs');
+
  // fs.createReadStream(path.join(__dirname,'inscription.html')).pipe(res);
- res.render('inscription.hbs');
+ 
 });
+
 
 app.get('/connexion',(req,res,next) => {
 
